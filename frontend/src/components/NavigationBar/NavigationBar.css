@@ -1,6 +1,201 @@
-/* Styles for screens larger than 768px */
-@media (max-width: 768px) {
-  #lgNavBar {
-    display: none;
+
+
+
+
+/* @keyframes mixColors {
+  0% { background-color: hsl(10, 100%, 50%); } 
+  25% { background-color: hsl(197, 100%, 50%); } 
+  50% { background-color: hsla(130, 100%, 50%, 0.431); } 
+  75% { background-color: hsl(184, 100%, 50%); } 
+  100% { background-color: hsl(27, 100%, 50%); } 
+} */
+
+
+
+
+.navbar {
+  animation: mixColors 8s infinite alternate;
+  padding: 15px 30px; 
+  display: flex; 
+  justify-content: space-between;
+  align-items: center; 
+  box-shadow: 0 10px 6px rgba(255, 255, 255, 0.1); /* Add shadow effect */
+  height: 45px;
+  background-color: rgb(0, 0, 0);
+}
+.navbar-nav {
+  display: flex; 
+  gap: 20px; 
+}
+.navbar-brand {
+  position: relative; 
+}
+
+
+.navbar-brand::after {
+  content: ''; 
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; 
+  transition: opacity 0.3s ease; 
+  z-index: 1; 
+}
+
+
+.navbar-brand:hover::after {
+  opacity: 1; 
+
+}
+.navbar-brand img {
+  width: 200px; 
+  height: auto;
+  position: relative; 
+  z-index: 2; 
+  transition: transform 0.3s ease; 
+  padding-top:12px;
+  filter: invert(100%);
+}
+
+
+.navbar-brand:hover img {
+  transform: scale(1.1);
+}
+
+
+
+
+.logo-img {
+  filter: brightness(0) invert(1); 
+  transition: filter 0.3s ease-in-out; 
+}
+
+.logo-img:hover {
+  filter: brightness(0.8) invert(1); 
+  animation: spin 2s linear infinite; 
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg); /* Rotate the logo 360 degrees */
   }
 }
+
+
+
+
+
+
+
+.navbar-nav {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+
+.navbar-nav .nav-link {
+  color: #ffffff; 
+  font-weight:700; 
+  margin: 0 10px; 
+  font-size: 16px;
+  
+}
+.navbar-nav .nav-link::after {
+  content: " "; 
+  margin-left: 1px;
+}
+
+
+.navbar-nav .nav-link:hover {
+  transform: scale(1.2);
+  transform: rotate(5deg);
+  opacity: 0.5;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  border: 2px solid #03030c;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+
+}
+.basic-nav-dropdown{
+
+}
+
+
+
+
+
+
+.navbar-nav .nav-link.active {
+  color: #ff6600; 
+}
+
+.navbar-nav .nav-link:not(:last-child) {
+  margin-right: 20px; 
+}
+
+.btn {
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add transition effect */
+}
+
+.btn:hover {
+  background-color: #ff9900; 
+  color: #080808; 
+}
+
+
+
+/* For screens smaller than 768px (e.g., mobile devices) */
+@media (max-width: 767px) {
+  .navbar {
+    flex-direction: column; /* Stack items vertically */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .navbar-nav {
+    margin-top: 10px; /* Add margin at the top */
+    justify-content: center; /* Center menu items */
+  }
+
+  .navbar-brand img {
+    width: 150px; /* Adjust logo size */
+  }
+
+  .navbar-nav .nav-link {
+    margin: 10px 0; /* Adjust margin */
+  }
+
+  .navbar-nav .nav-link::after {
+    content: none; /* Remove the space between words */
+  }
+}
+
+/* For screens larger than 768px */
+/* For screens smaller than 768px (e.g., mobile devices) */
+@media (max-width: 767px) {
+  .navbar {
+    flex-direction: column; /* Stack items vertically */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .navbar-nav {
+    margin-top: 10px; /* Add margin at the top */
+    justify-content: center; /* Center menu items */
+    text-align: center;
+  }
+
+  .navbar-brand img {
+    width: 150px; /* Adjust logo size */
+    margin: auto; 
+  }
+
+  .navbar-nav .nav-link {
+    margin: 10px 0; /* Adjust margin */
+    text-align: center; /* Center text */
+    width: 100%; /* Ensure menu items take full width */
+  }
+}
+

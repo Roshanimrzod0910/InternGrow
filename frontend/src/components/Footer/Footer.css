@@ -1,0 +1,81 @@
+/* Footer container */
+footer {
+    background-color: #1c223b;
+    padding: 50px 0;
+    box-shadow: 0px -5px 15px rgba(211, 204, 204, 0.1); /* Shadow effect */
+    color:#ffffff;
+  }
+  
+  /* Logo */
+  footer img {
+    width: 300px;
+    margin-bottom: 10px;
+  }
+  
+  /* Heading */
+  footer h6 {
+    font-weight: bold;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    margin-top: 0;
+  }
+  
+  /* Subheading */
+  footer p {
+    font-weight: bold;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  /* Columns */
+  footer .col-md-3 {
+    margin-bottom: 20px;
+  }
+  
+  /* List items */
+  footer ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  footer ul li {
+    margin-bottom: 5px;
+  }
+  
+  /* Chevron icon */
+  footer ul li i {
+    margin-right: 5px;
+  }
+  
+  /* Hover effect for list items */
+  footer ul li:hover {
+    color: #3366ff; /* Change color on hover */
+  }
+  
+  /* Animation for hover effect */
+  footer ul li {
+    transition: color 0.3s ease;
+  }
+  
+  /* Styling the horizontal line */
+hr {
+    border: none;
+    height: 2px; /* Adjust thickness as needed */
+    background-color: #000; /* Set the color of the line */
+    margin: 40px auto; /* Adjust spacing as needed */
+  }
+  
+  /* Animation effect */
+  hr {
+    width: 0; /* Initially make the width zero */
+    transition: width 0.3s ease; /* Add transition for width change */
+  }
+  
+  /* Hover effect */
+  hr:hover {
+    width: 100%; /* Expand the width on hover */
+  }
+  
